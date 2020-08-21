@@ -59,7 +59,7 @@ def autoencode_vecs(lda_preds, encoded_preds, encoder):
 
 def recommend(text, lda=lda, bert=bert, encoder=encoder, pretrained_vecs=pretrained_vecs):
     try:
-        engine = create_engine('postgresql+psycopg2://postgres:bryanross1@34.94.44.13:5432/')
+        engine = create_engine('postgresql+psycopg2://postgres:@34.94.44.13:5432/')
         engine.connect()
         processed_text = clean_input(text)
         lda_input = lda_vec(lda, processed_text)
