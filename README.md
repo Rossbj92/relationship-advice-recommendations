@@ -1,11 +1,8 @@
-My project objective is to identify general relationship problems that people have and recommend resources based on an individual's relationship issue(s).
-If time allows, I'd like to also generate a model to give advice to users.
-
 # Reddit Relationship Recommendations
 
-Using approximately 200,000 posts from r/relationshipadvice, I built a content-based recommendation system.
+Using approximately 200,000 posts from r/relationshipadvice, I built a content-based recommendation system to recommend r/relationshipadvice posts based on user-inputted text.
 
-Flask app code is also included using the final model to make recommendations for user-inputted text.
+Flask app code is also included using the final model to make recommendations.
 
 ## Replication Instructions
 
