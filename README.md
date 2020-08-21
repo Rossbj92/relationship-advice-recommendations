@@ -13,7 +13,7 @@ Flask app code is also included using the final model to make recommendations fo
 2. Install package requirements in ```requirements.txt```.
 3. Process data with [preprocessing](notebooks/preprocessing.ipynb) notebook.
 4. Extract vectors with the [feature engineering](notebooks/feature-engineering.ipynb) notebook.
-5. Experiment with recommendation methods in the [recommendations](notebooks/recommendationss.ipynb) notebook.
+5. Experiment with recommendation methods in the [recommendations](notebooks/recommendations.ipynb) notebook.
 
 *(Optional) Run [webscraper](notebooks/scraping.ipynb) notebook*
 
@@ -29,7 +29,7 @@ A test sample of data is provided to run the notebooks. Should you want to gathe
 - [scraping](notebooks/scraping.ipynb) - used for querying the Reddit Pushshift API
 - [preprocessing](notebooks/preprocessing.ipynb) - text preprocessing
 - [feature engineering](notebooks/feature-engineering.ipynb) - various text vectorization methods
-- [recommenders](notebooks/recommendations.ipynb) - tested recommendation methods
+- [recommendations](notebooks/recommendations.ipynb) - tested recommendation methods
 
 ```Models```
 - Necessary models fit on sample data to use the ```recommendations``` notebook.
@@ -53,7 +53,7 @@ A test sample of data is provided to run the notebooks. Should you want to gathe
 4. LDA-Doc2Vec embeddings
 5. LDA-BERT embeddings
 
-Of those, the LDA-BERT embeddings provided the most sensible recommendations. Future work will include optimizing the pipeline in processing new predictions, as well as making the recommender system more robust to shorter length searches.
+Of those, the LDA-BERT embeddings provided the most sensible recommendations. Future work will include optimizing the pipeline in processing new predictions, as well as making the recommendation system more robust to shorter length searches.
 
 ## Methods
 

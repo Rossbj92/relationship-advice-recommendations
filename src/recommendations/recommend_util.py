@@ -35,25 +35,25 @@ def autoencoder_load(model, weights):
 
 def load():
     """Loads all models/vectors from modeling notebook."""
-    df = pd.read_csv('data/interim/processed_sample.csv')
+    df = pd.read_csv('../data/interim/processed_sample.csv')
 
-    lda_bert_model = autoencoder_load('models/lda_bert/lda_bert_autoencoder.json', 'models/lda_bert/lda_bert_model.h5')
-    with open('models/lda_bert/lda_bert_vectors.pkl', 'rb') as f:
+    lda_bert_model = autoencoder_load('../models/lda_bert/lda_bert_autoencoder.json', '../models/lda_bert/lda_bert_model.h5')
+    with open('../models/lda_bert/lda_bert_vectors.pkl', 'rb') as f:
         bert_lda_vectors = pickle.load(f)
 
-    lda_d2v_model = autoencoder_load('models/lda_d2v/lda_d2v_autoencoder.json', 'models/lda_d2v/lda_d2v_model.h5')
-    with open('models/lda_d2v/lda_d2v_vectors.pkl', 'rb') as f:
+    lda_d2v_model = autoencoder_load('../models/lda_d2v/lda_d2v_autoencoder.json', '../models/lda_d2v/lda_d2v_model.h5')
+    with open('../models/lda_d2v/lda_d2v_vectors.pkl', 'rb') as f:
         lda_d2v_vectors = pickle.load(f)
 
     bert = SentenceTransformer('bert-base-nli-max-tokens')
-    with open('models/bert/bert_docvecs.pkl', 'rb') as f:
+    with open('../models/bert/bert_docvecs.pkl', 'rb') as f:
         bert_vectors = pickle.load(f)
 
-    lda = gensim.models.LdaModel.load('models/lda/lda_model')
-    with open('models/lda/lda_vecs.pkl', 'rb') as f:
+    lda = gensim.models.LdaModel.load('../models/lda/lda_model')
+    with open('../models/lda/lda_vecs.pkl', 'rb') as f:
         lda_vectors = pickle.load(f)
 
-    d2v = gensim.models.Doc2Vec.load('models/d2v/d2v_model')
+    d2v = gensim.models.Doc2Vec.load('../models/d2v/d2v_model')
     doc_vectors = np.array([d2v.docvecs[f'doc_{num}'] for num in range(df.shape[0])])
 
     return df, \

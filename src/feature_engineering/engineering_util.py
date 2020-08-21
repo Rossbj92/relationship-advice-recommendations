@@ -508,25 +508,25 @@ class ConcatVectors:
 
 def save(lda, lda_vecs, d2v, bert_vecs, lda_d2v_model, lda_d2v_vecs, lda_bert_model, lda_bert_vecs):
     """Saves lda vectors, doc2vec vectors, lda-bert vectors, and lda-doc2vec vectors."""
-    lda.save('models/lda/lda_model')
-    with open('models/lda/lda_vecs.pkl', 'wb') as f:
+    lda.save('../models/lda/lda_model')
+    with open('../models/lda/lda_vecs.pkl', 'wb') as f:
         pickle.dump(lda_vecs, f)
 
-    d2v.save('models/d2v/d2v_model')
+    d2v.save('../models/d2v/d2v_model')
 
-    with open('models/bert/bert_docvecs.pkl', 'wb') as f:
+    with open('../models/bert/bert_docvecs.pkl', 'wb') as f:
         pickle.dump(bert_vecs, f)
 
     lda_d2v_json = lda_d2v_model.to_json()
-    with open("models/lda_d2v/lda_d2v_autoencoder.json", "w") as f:
+    with open("../models/lda_d2v/lda_d2v_autoencoder.json", "w") as f:
         f.write(lda_d2v_json)
-    lda_d2v_model.save_weights("models/lda_d2v/lda_d2v_model.h5")
-    with open("models/lda_d2v/lda_d2v_vectors.pkl", 'wb') as f:
+    lda_d2v_model.save_weights("../models/lda_d2v/lda_d2v_model.h5")
+    with open("../models/lda_d2v/lda_d2v_vectors.pkl", 'wb') as f:
         pickle.dump(lda_d2v_vecs, f)
 
     lda_bert_json = lda_bert_model.to_json()
-    with open("models/lda_bert/lda_bert_autoencoder.json", "w") as f:
+    with open("../models/lda_bert/lda_bert_autoencoder.json", "w") as f:
         f.write(lda_bert_json)
-    lda_bert_model.save_weights("models/lda_bert/lda_bert_model.h5")
-    with open("models/lda_bert/lda_bert_vectors.pkl", 'wb') as f:
+    lda_bert_model.save_weights("../models/lda_bert/lda_bert_model.h5")
+    with open("../models/lda_bert/lda_bert_vectors.pkl", 'wb') as f:
         pickle.dump(lda_bert_vecs, f)

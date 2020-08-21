@@ -3,8 +3,8 @@ import matplotlib.font_manager as fm
 import numpy as np
 import umap
 
-header_font = fm.FontProperties(fname='./src/visualizations/Fonts/raleway/Raleway-Regular.ttf', size = 22)
-text_font = fm.FontProperties(fname='./src/visualizations/Fonts/lato-1/Lato-Regular.ttf', size = 19)
+header_font = fm.FontProperties(fname='../src/visualizations/Fonts/raleway/Raleway-Regular.ttf', size = 22)
+text_font = fm.FontProperties(fname='../src/visualizations/Fonts/lato-1/Lato-Regular.ttf', size = 19)
 plt.rcParams['legend.title_fontsize'] = 17 #Legend text size
 
 def umap_transform(actual_vectors, predicted_vector):
