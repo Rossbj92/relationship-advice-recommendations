@@ -1,0 +1,11 @@
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT relationship_app:app --timeout 180
+
+runtime_config:
+  python_version: 3
+
+resources:
+  cpu: 1
+  memory_gb: 3
+  disk_size_gb: 20

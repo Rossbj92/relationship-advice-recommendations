@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Relationship Recommender</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<!-- <div class="logo"><a href="index.html">Hielo <span>by TEMPLATED</span></a></div> -->
+			</header>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Reddit on Relationships</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Main -->
+			<div id="main" class="container">
+
+				<!-- Elements -->
+					<h2 id="elements" class="align-center">Description</h2>
+					<p>This web application recommends 5 posts from r/relationshipadvice based on user-inputted text. For more
+						information on the data and methods behind the model, feel free to check out my
+						<a href="https://github.com/rossbj92" target="_blank">Github</a>, or<a href="https://www.linkedin.com/in/bryan-ross-07871452/"
+							target="_blank"> connect with me directly</a>.
+					<h3 id="elements">Instructions</h3>
+					<p>Enter whatever relationship problem you are currently seeking advice on. For best results, try to be as descriptive as possible.</p>
+								<hr />
+					<div class="row 200%">
+						<div class="6u 12u$(medium)">
+
+							<!-- Text stuff -->
+
+
+							<!-- Lists -->
+
+
+
+								<!-- </div> -->
+
+						<!-- </div> -->
+					<!-- <div class="column">
+						<div class="12u$ 12u$(medium)"> -->
+								<form method="post" id="text_input" action="/">
+									<div class="row uniform">
+										<!-- Break -->
+										<div class="12u$">
+											<textarea name="problem" id="message" placeholder="Enter your problem" rows="12"></textarea>
+										</div>
+										<!-- Break -->
+										<div class="12u$">
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" /></li>
+												<li><input type="reset" value="Reset" class="alt" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+
+							<div class="row-uniform">
+									<h3>Entry:</h3>
+									<p>{{ text }}</p>
+									<hr />
+							</div>
+						</div>
+
+						<div class="6u 12u$(medium)">
+							<h4><b>Recommended Posts</b></h4></p>
+							<ol>
+								{% if text %}
+								    {% for p in prediction %}
+								      <li><a href={{ p['url'] }} target="_blank"> {{ p['title'] }}</a></li>
+								    {% endfor %}
+							    {% else %}
+							      {{ "Please enter text." }}
+							    {% endif %}
+							</ol>
+						</div>
+				</div>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://www.github.com/rossbj92" target="_blank" class="icon fa-github"><span class="label"></span></a></li>
+						<li><a href="https://www.linkedin.com/in/bryan-ross-07871452/" target="_blank" class="icon fa-linkedin"><span class="label"></span></a></li>
+						<li><a href="mailto:bryan.ross.529@my.csun.edu?" class="icon fa-envelope"><span class="label"></span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					Design from <a href="https://templated.co">TEMPLATED</a>.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="static/assets/js/skel.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
